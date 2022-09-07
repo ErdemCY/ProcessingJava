@@ -1,16 +1,17 @@
-int nummer = 1;
+int nummer = 0;
 
 switch(nummer){
+  case 0:
   case 1:
-    println("1");
+    println("Net geboren");
     break;
    case 2:
    case 3:
-     println("2 en 3");
+     println("Baby");
      break;
    case 4:
    case 5:
-     println("4 en 5");
+     println("Peuter");
      break;
    default:
      println("Dit ken ik niet");
@@ -19,7 +20,7 @@ switch(nummer){
     case 7:
     case 8:
     case 9:
-     println("6, 7, 8 en 9");
+     println("Kind");
      break;
     case 10:
     case 11:
@@ -30,6 +31,6 @@ switch(nummer){
     case 16:
     case 17:
     case 18:
-      println("10 t/m 18");
+      println("Tiener");
       break;
 }
