@@ -1,4 +1,9 @@
 String Boodschappen = "Boodschappenlijst";
+int value = 0;
+int regels = 0;
+
+
+//brengt knop in de sketch
 
 import controlP5.*;
 
@@ -9,7 +14,7 @@ Button knop1;
 Textfield tekstveld1;
 
 
-
+//knop opstellen en size en background neer zetten
 void setup(){
   size(800, 1200);
   background(255, 255, 255);
@@ -17,7 +22,7 @@ void setup(){
   
   knop1 = cp.addButton("Knop1");
   
-  knop1.setCaptionLabel("bevestig");
+  knop1.setCaptionLabel("Clear");
   
   knop1.setPosition(420,150);
   
@@ -28,22 +33,52 @@ void setup(){
                 .setCaptionLabel("Boodschappen")
                 .setColorLabel(color(255,0,0));
 
+     
+
+
                 
+             
 
 
   
 }
 
-void Knop1(){
-  println("Dit staat er in het tekstveld: " + tekstveld1.getText());
+//tekst van de boodschappenlijst verwijderen
+void Knop1(){             
+fill(0,0,0);  
+textSize(20);
 }
+
+
 
 
 
 
 void draw() {
+  
+  
 fill(0,0,0);
 textSize(50);
 text (Boodschappen, 200, 100);
-
+  
+  
 }
+//boodschappen enteren
+void keyPressed(){
+  if(keyCode == ENTER){
+  textSize(15);
+  text(tekstveld1.getText(), 200, 200 + (15 * regels));
+  regels += 1;
+  
+
+
+  }
+     
+ }      
+
+
+  
+
+
+
+    
