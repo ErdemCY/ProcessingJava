@@ -3,6 +3,7 @@ int value = 0;
 int regels = 0;
 
 
+
 //brengt knop in de sketch
 
 import controlP5.*;
@@ -20,12 +21,12 @@ void setup(){
   background(255, 255, 255);
   cp = new ControlP5(this);
   
-  knop1 = cp.addButton("Knop1");
+  knop1 = cp.addButton("knop1");
   
   knop1.setCaptionLabel("Clear");
   
   knop1.setPosition(420,150);
-  
+    
   tekstveld1 = cp
                 .addTextfield("TextInput1")
                 .setPosition(200,150)
@@ -34,19 +35,23 @@ void setup(){
                 .setColorLabel(color(255,0,0));
 
      
-
+}
 
                 
              
 
 
   
-}
+
 
 //tekst van de boodschappenlijst verwijderen
-void Knop1(){             
-fill(0,0,0);  
-textSize(20);
+void knop1(){  
+  
+  fill(255,255,255);
+  textSize(800);
+  rect(0,0 ,2000, 2000 + (0 * regels));
+  regels += 1;
+ 
 }
 
 
@@ -75,6 +80,10 @@ void keyPressed(){
   }
      
  }      
+
+
+
+
 
 
   
